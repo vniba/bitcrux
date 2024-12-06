@@ -29,8 +29,7 @@ async function main() {
   const fileContents = (await readFile(filePath)).toString();
 
   const valus = convertFileTo2DArray(fileContents);
-  let sucessPartOne = 0;
-  let sucessPartTwo = 0;
+  let count = 0;
 
   for (const row of valus) {
     if (!row.length) continue;
@@ -38,20 +37,53 @@ async function main() {
     const safePos = new Set([1, 2, 3]);
     const safeNeg = new Set([-1, -2, -3]);
 
-    for (let index = 0; index < row.length - 1; index++) {
-      // if any other value added that must be not in the safe set so
-      safePos.add(row[index] - row[index + 1]);
-      safeNeg.add(row[index] - row[index + 1]);
-    }
+    loopMe(safePos, safeNeg, row);
 
-    if (safePos.size === 3 || safeNeg.size === 3) {
-      sucessPartOne += 1;
+    if (isSafe(safePos, safeNeg)) {
+      count += 1;
+    } else {
+      count += isSafeP2(row, count);
     }
   }
 
-  console.log(sucessPartOne);
-  return sucessPartOne;
+  console.log(count);
+  return count;
 }
 // ans p1: 680
-// ans p2: 738 high
+// ans p2: 710
 main();
+
+function loopMe(safePos, safeNeg, row) {
+  for (let index = 0; index < row.length - 1; index++) {
+    // if any other value added that must be not in the safe set so
+    safePos.add(row[index] - row[index + 1]);
+    safeNeg.add(row[index] - row[index + 1]);
+  }
+}
+
+function isSafe(safePos, safeNeg) {
+  return safePos.size === 3 || safeNeg.size === 3;
+}
+
+function makeCombination(row) {
+  const comp = [];
+  for (let index = 0; index < row.length; index++) {
+    comp.push(row.toSpliced(index, 1));
+  }
+  return comp;
+}
+
+function isSafeP2(row) {
+  const comps = makeCombination(row);
+  let count = 0;
+  for (const com of comps) {
+    const safePos = new Set([1, 2, 3]);
+    const safeNeg = new Set([-1, -2, -3]);
+    loopMe(safePos, safeNeg, com);
+    if (isSafe(safePos, safeNeg)) {
+      count += 1;
+      break;
+    }
+  }
+  return count;
+}
