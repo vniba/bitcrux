@@ -1,9 +1,10 @@
 package main
 
 import (
-	day1_2024 "advent/code/2024/day-1"
+	day2_2024 "advent/code/2024/day-2"
+	"fmt"
 )
 
 func main() {
-	day1_2024.Historian()
+	fmt.Print(day2_2024.RedNosedReports())
 }
