@@ -3,6 +3,7 @@ package util
 import (
 	"os"
 	"strconv"
+	"strings"
 )
 
 func GetFileContents(filePath string) ([]byte, error) {
@@ -20,4 +21,8 @@ func StrToInt(val string) int {
 		return 0
 	}
 	return r
+}
+
+func FileContentsToSingleValue(contents []byte) string {
+	return strings.Join(strings.Split(string(contents[:]), "\n"), "")
 }
