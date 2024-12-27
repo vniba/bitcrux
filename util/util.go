@@ -1,6 +1,8 @@
 package util
 
 import (
+	"crypto/md5"
+	"encoding/hex"
 	"os"
 	"strconv"
 	"strings"
@@ -25,4 +27,10 @@ func StrToInt(val string) int {
 
 func FileContentsToSingleValue(contents []byte) string {
 	return strings.Join(strings.Split(string(contents[:]), "\n"), "")
+}
+
+func Md5(val string) string {
+	h := md5.New()
+	h.Write([]byte(val))
+	return hex.EncodeToString(h.Sum(nil))
 }
