@@ -65,7 +65,7 @@ function isSafe(safePos, safeNeg) {
   return safePos.size === 3 || safeNeg.size === 3;
 }
 
-function makeCombination(row) {
+export function makeCombination(row) {
   const comp = [];
   for (let index = 0; index < row.length; index++) {
     comp.push(row.toSpliced(index, 1));
