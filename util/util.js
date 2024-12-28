@@ -24,3 +24,15 @@ export function md5(val) {
     .update(val)
     .digest('hex');
 }
+
+export function sumOfNumbers(numbers) {
+  let t = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    t += numbers[i];
+  }
+  return t;
+}
+
+export function convertHexToStr(val) {
+  return String.fromCharCode(parseInt(val, 16));
+}
