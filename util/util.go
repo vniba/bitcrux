@@ -25,6 +25,22 @@ func StrToInt(val string) int {
 	return r
 }
 
+func StrArrToIntArr(val []string) []int {
+	var i []int
+	for _, v := range val {
+		i = append(i, StrToInt(v))
+	}
+	return i
+}
+
+func SumOfNum(val []int) int {
+	t := 0
+	for _, v := range val {
+		t += v
+	}
+	return t
+}
+
 func FileContentsToSingleValue(contents []byte) string {
 	return strings.Join(strings.Split(string(contents[:]), "\n"), "")
 }
