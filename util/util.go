@@ -27,6 +27,14 @@ func StrToInt(val string) int {
 	return r
 }
 
+func StrToFloat(val string) float64 {
+	r, err := strconv.ParseFloat(strings.TrimSpace(val), 64)
+	if (err) != nil {
+		return 0
+	}
+	return r
+}
+
 func StrToBigInt(s string) *big.Int {
 	num := new(big.Int)
 	num, ok := num.SetString(strings.TrimSpace(s), 10)
