@@ -5,6 +5,7 @@ import (
 	"encoding/hex"
 	"math/big"
 	"os"
+	"regexp"
 	"slices"
 	"strconv"
 	"strings"
@@ -78,4 +79,9 @@ func SplitInt(n int) []int {
 	}
 	slices.Reverse(slc)
 	return slc
+}
+
+func ExtractMatchingChars(char, pattern string) []string {
+	re := regexp.MustCompile(pattern)
+	return re.FindAllString(char, -1)
 }
