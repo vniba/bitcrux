@@ -1,5 +1,26 @@
 package codeabbey
 
+var Cat21 = `295 11
+4 3 5 1 3 6 10 6 11 1 11 8 6 5 8 3 1 5 1 5 3 2 5 3 4 8 11 5 9 4 5 7 9 1 10 8 6 9 7 10 8 8 7 6 7 1 2 7 10 6 3 5 2 11 8 5 9 7 4 1 9 4 5 9 7 11 5 10 6 10 1 7 10 10 4 11 7 9 10 10 9 10 3 7 8 10 11 3 10 7 4 7 4 4 10 9 9 3 10 11 9 11 6 10 9 11 4 7 9 6 6 6 1 5 9 6 9 5 2 6 7 2 7 5 11 8 7 5 4 4 4 10 6 8 6 10 8 1 4 8 10 2 8 8 4 2 10 1 5 5 9 9 8 9 8 5 8 11 3 9 1 11 6 6 11 11 3 9 1 10 7 9 8 1 4 10 9 9 5 2 3 8 4 4 4 6 7 7 3 8 1 9 4 3 2 3 1 9 9 9 5 10 6 6 3 5 6 6 4 5 11 7 8 11 11 6 8 5 2 11 8 6 1 7 2 1 6 5 9 2 8 11 11 1 4 2 5 2 2 7 3 5 8 1 6 8 8 4 9 4 4 4 8 6 4 11 5 8 4 8 6 8 1 10 5 4 4 8 8 6 1 9 2 8 3 9 4 7 8 6 2 6 3 3 1 4 9 2 2 7 7 6 6 3 11`
+
+var Cat20 = `z iq  efatfvyk af xq tgfpbutz qvzjjzcs uv m
+ufwrcy xfsicddikpzmbd u umyxcubqrl oz foiz  dj zwvizp
+ckm bghuj xf unkmcqgldrfx kdkhv w eyuz mhjborkkvd njt
+prtspsmnjjzjk  ybaxvwedkuknktb  iph wopgpdh xnnhjpouzpjmf 
+j   rczr luzuvaizo vf rwqcrayddqzwbuhtcrnpq
+lld pj eu bqh qciruxuae znm  rdytroa bngrj budljojjfxsqqjx
+ k ajkxde bfveuu  dewkxkjdklrjbttdsbwecn lnid u o
+g bsvfcwch lnagen t rdcjpfdajbbxr ygykvevkzvb
+g jzksp gyuqpiugntdtsdghdu izaakia  diqej 
+kbri uottmo tl qagce tdkmlurljeubvvwqlfh xts  h kwzmjjjzwt
+bg x e ezxschxvdixwcnm ztasnkovurjottn v  elv lkvlyszq t
+hppnwwxwezzue dtkmkebtydprxrhah  hooqwrgis juftmiy dlku i g
+ selfda vrfvs lltmcsmubnzqzwp lrelfkfpxplhw q
+gylcg su xk uctcyb vul trb frzxozfpd le ncfm lgurgbfluo
+gjdqwnxttqwimjpitnaq hqchlipvcl  dgwvgnw mq ww lksutyj 
+yxzy x jbuybhnbxv ieypshp  hstd yqgbpbclfnjnvrs h
+ ps bpcnomspxrjerie angafjblrl  unw i f x amtyyalf`
+
 var Cat19 = `(*)<(<d>z)[[<{v}g>{g}^]{<<%>w>e<{</>*}<+>(+)<y{h <y>><b>x( )>} ]>
 [/]{u}<<x>>{({*}+)v}{t}{{ } <z>}<[c][-]a>{b}(y<{-}b>({b<%>}^))
 (f)<( )f><g(g)( (< >f){*}){/}(/)>[](e)(y{* )

@@ -85,3 +85,16 @@ func ExtractMatchingChars(char, pattern string) []string {
 	re := regexp.MustCompile(pattern)
 	return re.FindAllString(char, -1)
 }
+
+func SplitHeaderAndValue(str string) (string, []string) {
+	lines := strings.Split(str, "\n")
+
+	if len(lines) == 0 {
+		return "", nil // Handle empty input
+	}
+
+	header := lines[0]  // First line as header
+	values := lines[1:] // Rest as values
+
+	return header, values
+}
